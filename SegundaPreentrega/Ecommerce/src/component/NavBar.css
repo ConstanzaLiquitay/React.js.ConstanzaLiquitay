@@ -1,0 +1,16 @@
+/*NavBar*/
+.Container-NavBar{
+    background-color: rgb(156, 23, 0);
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos de forma uniforme */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 5px;
+  }
+.ListContainer{
+    list-style: none;
+}
+  .List-NavLink{
+    color: white;
+    list-style: none;
+    text-decoration: none;
+  }
