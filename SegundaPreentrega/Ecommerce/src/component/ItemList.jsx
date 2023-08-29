@@ -9,7 +9,7 @@ const ItemList = ({items}) => {
       <div>
         {items.map((item) => (
           <div key={item.id}>
-            <Link to={`/item${item.id}`} >
+            <Link to={`/item/${item.id}`} >
               <img src={item.imagen} alt="" />
               <h2> {item.title} </h2>
               <h3> {item.subtitle} </h3>
