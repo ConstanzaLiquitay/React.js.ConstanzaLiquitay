@@ -9,7 +9,7 @@ const NavBar = () => {
         </h1>
         <ul className="ListContainer" >
             <li>
-                <NavLink className="List-NavLink"  to="/category/vinotintos">Vinos Tintos</NavLink>
+                <NavLink className="List-NavLink"  to="/category/vinotinto">Vinos Tintos</NavLink>
             </li>
         </ul>
         <ul className="ListContainer">
