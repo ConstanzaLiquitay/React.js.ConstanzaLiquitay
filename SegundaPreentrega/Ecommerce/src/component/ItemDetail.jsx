@@ -9,8 +9,11 @@ const ItemDetail = ({item}) => {
 
     return (
         <div>
+            <img src={item.imagen} alt="" />
             <h1>{item.title}</h1>
-            <h2>{item.category}</h2>
+            <h2>{item.bodega}</h2>
+            <p>{item.description}</p>
+
         </div>
     );
 };

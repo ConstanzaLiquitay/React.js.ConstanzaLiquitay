@@ -19,11 +19,6 @@ const NavBar = () => {
         </ul>
         <ul className="ListContainer">
             <li>
-            <NavLink  className="List-NavLink" to="/category/espumantes">Espumantes</NavLink>
-            </li>
-        </ul >
-        <ul className="ListContainer">
-            <li>
             <NavLink className="List-NavLink" to="/category/comocomprar">¿Como comprar?</NavLink>
             </li>
         </ul>

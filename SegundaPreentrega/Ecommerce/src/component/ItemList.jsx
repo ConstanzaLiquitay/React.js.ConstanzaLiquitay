@@ -1,5 +1,6 @@
 import propTypes from 'prop-types';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import "./ItemList.css"
 
 const ItemList = ({items}) => {
   return ( 
@@ -9,11 +10,12 @@ const ItemList = ({items}) => {
       <div>
         {items.map((item) => (
           <div key={item.id}>
-            <Link to={`/item/${item.id}`} >
-              <img src={item.imagen} alt="" />
+            <Link className='link' to={`/item/${item.id}`} >
+              <img className="img-vinos" src={item.imagen} alt="" />
               <h2> {item.title} </h2>
               <h3> {item.subtitle} </h3>
-              <p> {item.info} </p>
+              <h4>{item.bodega}</h4>
+              <p> {item.description} </p>
               <button> {item.btnVerMas} Ver Mas</button>
               <button> {item.btnComprar} Comprar </button>
               </Link>
