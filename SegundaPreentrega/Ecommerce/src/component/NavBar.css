@@ -1,10 +1,18 @@
 /*NavBar*/
 .Container-NavBar{
-    background-color: rgb(156, 23, 0);
+  background-image: url('./Imagenes/Img.NavBar/Viñedos.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+    height: 600px;
+    width: 100vw;
+  }
+
+  .link-NavBar{
     display: flex;
     justify-content: space-between; /* Distribuye los elementos de forma uniforme */
     align-items: center; /* Centra verticalmente los elementos */
-    padding: 5px;
+    padding: 20px;
   }
 .ListContainer{
     list-style: none;
@@ -13,4 +21,9 @@
     color: white;
     list-style: none;
     text-decoration: none;
+  }
+
+  .container-imgNavbar img{
+    width: 100vw;
+
   }
