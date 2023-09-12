@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Modal from "./component/Modal";
+import Modalcontainer from "./component/ModalContainer";
 import ItemDetailContainer from "./component/ItemDetailContainer";
 import ItemListContainer from "./component/ItemListContainer";
 import NavBar from './component/NavBar';
@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <div>
-      <Modal />
+      <Modalcontainer />
 
       </div>
 
