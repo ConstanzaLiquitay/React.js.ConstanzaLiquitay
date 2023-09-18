@@ -13,7 +13,7 @@ const firebaseConfig = {
   projectId: "coder-react-1c265",
   storageBucket: "coder-react-1c265.appspot.com",
   messagingSenderId: "1096153978027",
-  appId: "1:1096153978027:web:dd0b8992fff0236e45d3ee"
+  appId: "1:1096153978027:web:dd0b8992fff0236e45d3ee",
 };
 
 initializeApp(firebaseConfig);

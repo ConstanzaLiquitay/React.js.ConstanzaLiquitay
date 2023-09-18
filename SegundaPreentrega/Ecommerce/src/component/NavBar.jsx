@@ -10,6 +10,8 @@ const NavBar = () => {
                 <h1>
                     <Link className="List-NavLink" to="/">Mercado de Vinos</Link>
                 </h1>
+
+                
                 <ul className="ListContainer" >
                     <li>
                         <NavLink className="List-NavLink" to="/category/vinotinto">Vinos Tintos</NavLink>
@@ -18,11 +20,6 @@ const NavBar = () => {
                 <ul className="ListContainer">
                     <li >
                         <NavLink className="List-NavLink" to="/category/vinoblanco">Vinos Blancos</NavLink>
-                    </li>
-                </ul>
-                <ul className="ListContainer">
-                    <li>
-                        <NavLink className="List-NavLink" to="/category/comocomprar">¿Como comprar?</NavLink>
                     </li>
                 </ul>
                 <div>

@@ -1,9 +1,9 @@
-import React from 'react'
+import Carrito from "./Carrito"
 
 const CarritoContainer = () => {
   return (
     <div>
-      
+      <Carrito/>
     </div>
   )
 }

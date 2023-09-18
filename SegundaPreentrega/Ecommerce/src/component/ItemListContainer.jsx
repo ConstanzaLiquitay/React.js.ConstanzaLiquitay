@@ -6,14 +6,14 @@ import ItemList from "./ItemList"
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
-  const {categoryId} = useParams();
+  const {category} = useParams();
 
 useEffect(() => {
-  console.log("useEffect" , categoryId);
-getProducts(categoryId).then((response) => {
+  console.log("useEffect" , category);
+getProducts(category).then((response) => {
   setItems(response);
 });
-}, [categoryId ])
+}, [category])
 
 
 

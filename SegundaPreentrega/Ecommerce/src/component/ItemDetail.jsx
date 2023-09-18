@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+
 import { useEffect, useState } from "react";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 
@@ -38,6 +38,7 @@ const ItemDetail = () => {
   
         {!isLoading && item && (
           <div>
+            <img src={item.image} alt="" />
             <h3>Nombre: {item.title}</h3>
             <p>ID: {item.id}</p>
             <p>Descripción: {item.description}</p>

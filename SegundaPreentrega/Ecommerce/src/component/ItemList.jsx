@@ -1,52 +1,37 @@
-import propTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import "./ItemList.css";
-import {useState, useEffect} from 'react';
-import {collection, getDocs, getFirestore, query, // where,
-limit,
-} from "firebase/firestore";
+import propTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-const ItemList = () => {
+const ItemList = ({ items, isLoading }) => {
+  if (isLoading) {
+    return <h2>Loading...</h2>;
+  }
 
-  const [items, setItems] = useState([])
+  return (
+    <div>
+      <h1>ItemList</h1>
 
-  useEffect(() => {
-const db = getFirestore();
+      <ul>
+        {items.map((item) => (
+          <li key={item.id}>
+            <Link to={`/item/${item.id}`}>
+              <img src={item.image} alt="" />
+              <p>{item.category}</p>
+              <h3>{item.title}</h3>
+              <h4> {item.bodega} </h4>
+              <p> {item.description} </p>
+              <p>${item.price}</p>
+            </Link>
+            <button>Agregar al Carrito</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
-const itemCollection = collection (db, "items")
+ItemList.propTypes = {
+  items: propTypes.array.isRequired,
+  isLoading: propTypes.bool,
+};
 
-getDocs(itemCollection).then((snapshot) =>{
-const itemsFromSnapshot = snapshot.docs.map(doc => ({
-  id: doc.id,
-  ...doc.data(),
-}))
-
-setItems(itemsFromSnapshot)
-})
-
-
-  },[])
-
-return (
-  <div>
-    <h2>Item List</h2>
-
-    {items.map((items) => (
-  
-
-     
-<card key= {items.id}>
-        <h3>Nombre: {items.title}</h3>
-        <img src={items.image} alt="" />
-        <p>ID: {items.id}</p>
-        <p>Descripción: {items.description}</p>
-        <p>Precio: ${items.price}</p>
-        <p>Stock: {items.stock}</p>
-</card>
-
-    ))}
-  </div>
-)
-}
-
-export default ItemList
+export default ItemList;
