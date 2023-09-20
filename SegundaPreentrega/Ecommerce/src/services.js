@@ -27,7 +27,7 @@ export const getProduct = (id) => {
 
     const itemDoc = doc(db, "items", id);
 getDoc(itemDoc).then((doc) => {
-  if (doc.existis()){
+  if (doc.exists()){
     resolve ({id: doc.id, ...doc.data()});
 
   } else {
@@ -71,5 +71,15 @@ export const getProducts = (category) => {
         reject(error);
       });
     });
+
+    
+}
+
+export const createOrder = (orden) => {
+  const db = getFirestore();
+
+  const ordersCollection = collection(db, "orders");
+
+  return addDoc(ordersCollection, orden);
 }
 

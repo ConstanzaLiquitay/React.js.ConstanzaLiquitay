@@ -1,2 +1,5 @@
-import { useState } from 'react';
-import CartContext from "./CartContext"
+import { createContext } from "react";
+
+const CartContext = createContext();
+
+export default CartContext

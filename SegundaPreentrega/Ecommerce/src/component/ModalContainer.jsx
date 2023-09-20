@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+/*import React, { useState, useEffect } from 'react';
 import Modal from "./Modal"
 
 const Modalcontainer = () => {
@@ -26,4 +26,4 @@ const Modalcontainer = () => {
 
 
 
-export default Modalcontainer;
+export default Modalcontainer;*/

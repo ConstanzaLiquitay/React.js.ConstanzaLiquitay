@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
-import "./NavBar.css"
+import "./NavBar.css";
 
 const NavBar = () => {
     return (
@@ -11,7 +11,7 @@ const NavBar = () => {
                     <Link className="List-NavLink" to="/">Mercado de Vinos</Link>
                 </h1>
 
-                
+
                 <ul className="ListContainer" >
                     <li>
                         <NavLink className="List-NavLink" to="/category/vinotinto">Vinos Tintos</NavLink>
@@ -22,19 +22,13 @@ const NavBar = () => {
                         <NavLink className="List-NavLink" to="/category/vinoblanco">Vinos Blancos</NavLink>
                     </li>
                 </ul>
-                <div>
-                    <CartWidget></CartWidget>
-                </div>
+                <CartWidget></CartWidget>
             </nav>
-
-          {/*<div className="container-imgNavbar">
-                <img src="../Imagenes/Img.NavBar/Viñedos.jpg" alt="" />
-            </div>*/}
-    </div>
-
-    
-    )
-}
+        </div>
 
 
-export default NavBar
+    );
+};
+
+
+export default NavBar;

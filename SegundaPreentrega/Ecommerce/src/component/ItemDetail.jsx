@@ -1,53 +1,30 @@
+import PropTypes from "prop-types";
 
-import { useEffect, useState } from "react";
-import { doc, getDoc, getFirestore } from "firebase/firestore";
+const ItemDetail = ({ items, isLoading, addItem }) => {
+    if (isLoading) {
+      return <h2>Loading...</h2>;
+    }
+  
+    if (!items) {
+      return <h2>Product not found</h2>;
+    }
 
-const ItemDetail = () => {
-    const [item, setItem] = useState(null);
-    const [isLoading, setIsLoading] = useState(false);
-  
-    useEffect(() => {
-      const db = getFirestore();
-  
-      const itemRef = doc(db, "items", "qHK5NyYk1nVPjpn4emDh");
-  
-      setIsLoading(true);
-      getDoc(itemRef).then((snapshot) => {
-        setIsLoading(false);
-  
-        if (snapshot.exists()) {
-          setItem({
-            id: snapshot.id,
-            ...snapshot.data(),
-          });
-        }
-      });
-  
-      // console.log("itemRef", itemRef);
-    }, []);
-  
-    // console.log("item", item);
-  
-    return (
-      <div>
-        <h2>Item Detail</h2>
-  
-        {isLoading && <p>Cargando...</p>}
-  
-        {!isLoading && !item && <p>Item no encontrado</p>}
-  
-        {!isLoading && item && (
-          <div>
-            <img src={item.image} alt="" />
-            <h3>Nombre: {item.title}</h3>
-            <p>ID: {item.id}</p>
-            <p>Descripción: {item.description}</p>
-            <p>Precio: ${item.price}</p>
-            <p>Stock: {item.stock}</p>
-          </div>
-        )}
-      </div>
-    );
-  };
-  
-  export default ItemDetail;
+  return (
+    <div>
+
+      <img src={items.image} alt="" />
+      <h2> {items.bodega} </h2>
+      <p>{items.description}</p>
+      <p> ${items.price} </p>
+      <button  onClick={() => addItem(items, 1)}>Agregar al Carrito</button>
+    </div>
+  );
+};
+
+ItemDetail.propTypes = {
+  items: PropTypes.object,
+  isLoading: PropTypes.bool,
+  addItem: PropTypes.func,
+};
+
+export default ItemDetail;

@@ -1,4 +1,4 @@
-import "./Modal.css"
+/*import "./Modal.css"
 
 
 const Modal = ({ closeModal }) => {
@@ -13,7 +13,7 @@ const Modal = ({ closeModal }) => {
 
     </div>
   );
-};
+};*/
 
 
 
