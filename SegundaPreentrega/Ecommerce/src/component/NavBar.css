@@ -1,13 +1,14 @@
 /*NavBar*/
 .Container-NavBar{
-  background-image: url('./Imagenes/Img.NavBar/Viñedos.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-
-    height: 600px;
+  background-color: rgba(175, 0, 0, 0.788);
+    height: 120px;
     width: 100vw;
   }
-
+.logo-img{
+  width: 200px;
+}
   .link-NavBar{
     display: flex;
     justify-content: space-between; /* Distribuye los elementos de forma uniforme */

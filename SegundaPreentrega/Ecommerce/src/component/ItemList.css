@@ -1,9 +1,39 @@
-.img-vinos{
-    height: auto;
-    width: 350px;
+/*Enlaces*/
+ul {
+    list-style: none;
+    /* Elimina las viñetas o números de lista */
+    padding: 0;
+    margin: 0;
 }
-.link{
+
+.enlace {
     text-decoration: none;
-    font-weight: normal;
-    color: black;
+    /* Elimina la subrayado del enlace */
+    color: inherit;
+    /* Hereda el color del texto de su contenedor */
+
+}
+
+/*Card*/
+.card {
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 300px;
+    height: auto;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.img-products {
+    width: 300px;
+    height: auto;
 }

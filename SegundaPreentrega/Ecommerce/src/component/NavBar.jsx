@@ -7,9 +7,7 @@ const NavBar = () => {
         <div className="Container-NavBar">
 
             <nav className="link-NavBar">
-                <h1>
-                    <Link className="List-NavLink" to="/">Mercado de Vinos</Link>
-                </h1>
+                    <Link className="List-NavLink" to="/"> <img className="logo-img" src="./Imagenes/logotipo/logo.proyectoMercadodeVinos.png" alt="" /></Link>
 
 
                 <ul className="ListContainer" >
@@ -20,6 +18,11 @@ const NavBar = () => {
                 <ul className="ListContainer">
                     <li >
                         <NavLink className="List-NavLink" to="/category/vinoblanco">Vinos Blancos</NavLink>
+                    </li>
+                </ul>
+                <ul  className="ListContainer">
+                    <li>
+                        <NavLink  className="List-NavLink"  to="/bodegas">Bodegas</NavLink>
                     </li>
                 </ul>
                 <CartWidget></CartWidget>

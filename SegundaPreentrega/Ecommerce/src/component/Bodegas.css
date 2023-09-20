@@ -1,0 +1,32 @@
+.title.bodegas{
+    font-size: 50px;
+}
+
+
+.logos-bodegas{
+    width: 200px;
+    border-radius: 100%; /* Hace que la imagen sea redonda */
+    border: rgb(140, 140, 140) 7px solid;
+    transition: transform 0.3s;
+}
+.logos-bodegas:hover{
+    transform: scale(1.1);
+}
+
+.container-bodegas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.container-subtitle{
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 80px;
+}
+.container-subtitle h3{
+    text-align: center
+    
+    }
