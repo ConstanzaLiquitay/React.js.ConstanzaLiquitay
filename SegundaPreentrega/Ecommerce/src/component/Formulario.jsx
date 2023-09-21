@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 const Formulario = () => {
 
     const [formData, setFormData] = useState({
@@ -12,15 +13,15 @@ const Formulario = () => {
 
 
     const handleChange = (event) => {
-        console.log(handleChange, event.target.value, event.target.name)
+        console.log("handleChange", event.target.value, event.target.name);
 
         const { name, value } = event.target;
 
         setFormData({
-            ...forData,
+            ...formData,
             [name]: value,
-        })
-    }
+        });
+    };
 
     const handleReset = () => {
         setFormData({
@@ -35,12 +36,12 @@ const Formulario = () => {
         console.log("handleSubmit", formData);
     
         alert(JSON.stringify(formData));
+
+        handleReset();
     }
   
 
-    handleReset();
     return (
-    <div>
          <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="name">Nombre</label>
@@ -76,7 +77,7 @@ const Formulario = () => {
 
       <button type="submit">Enviar</button>
     </form>
-    </div>
+
   )
 }
 
