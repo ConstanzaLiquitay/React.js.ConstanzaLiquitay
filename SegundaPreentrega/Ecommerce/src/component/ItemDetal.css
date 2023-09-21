@@ -1,0 +1,37 @@
+
+.container-cardproducts {
+    border: 1px solid #ccc;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 500px;
+    height: auto;
+}
+
+
+.container-itemdetail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+/*Imagen*/
+.img-products {
+    width: 300px;
+    height: auto;
+}
+
+/*Boton*/
+.style-btn{
+    background-color: #000000; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none;
+    padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+    border-radius: 5px; /* Agrega esquinas redondeadas */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #878787; /* Cambia el color de fondo al pasar el cursor */
+  }

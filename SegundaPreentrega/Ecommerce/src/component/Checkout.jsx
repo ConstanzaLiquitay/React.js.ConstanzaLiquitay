@@ -3,6 +3,8 @@ import CartContext from "./Context/CartContext";
 import { getCartTotal, mapCartToOrderItems } from "../utils";
 import { serverTimestamp } from "firebase/firestore";
 import { createOrder } from "../services";
+import  Formulario  from "./Formulario";
+import "./Checkout.css";
 
 const CheckOut = () => {
 
@@ -33,31 +35,35 @@ const CheckOut = () => {
     return (
         <div>
             <h1>Resumen de la Compra</h1>
-            <div>
-            {orderId && <p>El id de la orden es : {orderId}</p>}
-            {!orderId && (
-                <>
 
-                    <div>Formulario de contacto</div>
-                    <ul>
-                        {cart.map((items) => (
-                            <li key={items.id}>
-                                <p> {items.title} </p>
-                                <p>{items.quantity}</p>
-                                <p> ${items.price}</p>
-                                <p>Subtotal:${items.price * items.quantity}</p>
-                            </li>
-                        ))}
-                    </ul>
-                    <p>Total de la compra:${total} </p>
-                    <button onClick={handleCheckout}> Finalizar Compra</button>
-                    {isLoading && <p>Procesando compra...</p>}
-                </>
-                
-            )}
-        </div>
+            <Formulario/>
+            <div>
+
+
+                {orderId && <p>El id de la orden es : {orderId}</p>}
+                {!orderId && (
+                    <>
+                        <div className="container-checkout">
+                            <ul >
+                                {cart.map((items) => (
+                                    <li key={items.id}>
+                                        <p> {items.title} </p>
+                                        <p>{items.quantity}</p>
+                                        <p> ${items.price}</p>
+                                        <p>Subtotal:${items.price * items.quantity}</p>
+                                    </li>
+                                ))}
+                            </ul>
+                            <p>Total de la compra:${total} </p>
+                            <button onClick={handleCheckout}> Finalizar Compra</button>
+                            {isLoading && <p>Procesando compra...</p>}
+                        </div>
+                    </>
+
+                )}
             </div>
-          
+        </div>
+
     );
 };
 

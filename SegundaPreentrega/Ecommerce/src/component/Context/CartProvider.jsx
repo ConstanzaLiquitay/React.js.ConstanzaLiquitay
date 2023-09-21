@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Swal from 'sweetalert2';
 import CartContext from "./CartContext";
 
 const CartProvider = ({ children }) => {
@@ -10,6 +11,14 @@ const CartProvider = ({ children }) => {
   };
 
   const addItem = (product, quantity) => {
+
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Producto Agregado al Carrito 🍷',
+      showConfirmButton: false,
+      timer: 1000
+    })
 
     const itemInCart = isInCart(product.id);
 
